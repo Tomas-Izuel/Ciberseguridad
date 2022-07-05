@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./styles/bases.css ">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <title>Bases para la ciberseguridad</title>
+</head>
+
+<body>
+    <header>
+        <h2>Bases para la ciberseguridad</h2>
+        <a href="./index.html"><button>Home</button></a>
+    </header>
+    <main>
+        <section class="proxys">
+            <h2>•Proxys</h2>
+            <div>
+                <img src="./media/Proxy.png" alt="proxy-image">
+                <div>
+                    <p>Es un tipo de servidor intermediario que se situa entre el equipo de un usuario y una direccion
+                        de internet que se quiere visitar. Redirige la conexion del usuario y enmascara su IP.
+                        Los proxys operan a nivel de aplicacion, es decir solo actua sobre un programa especifico y no
+                        en la totalidad de las conexiones, y solo redirigen el trafico de un programa, mientras que un
+                        BPN lo hacen a nivel de sistema operativo.
+                        Un proxy no encripta la conexion del usuario.</p>
+                    <h3>Ventajas</h3>
+                    <p>•Los equipos no tienen acceso al router, por lo que podemos permitir o denegar el acceso.</p>
+                    <p>•Las paginas quedan guardadas en la cache del proxy.</p>
+                    <p>•Se puede crear una lista de URL prohibidas.</p>
+                    <p>•El proxy guarda informe de las paginas visitadas.</p>
+                    <p>•El proxy funciona como cortafuegos.</p>
+                </div>
+            </div>
+            <h3>•Proxies HTTP:</h3>
+            <p>Tambien conocido como HTTP proxy, es un servicio que actua entre el cliente y el servidor dentro de una
+                red de infraestructura.</p>
+            <p>Estan diseñados especificamente para su uso en webs. Pueden instalarse en un navegador para redirigir
+                todo el trafico web a traves de proxy y proteger la IP.</p>
+            <p>Puede ser tan simple como el reenvio de trafico de los usuarios o tan complejo como intercambiar
+                informacion entre el cliente y servidor, permitiendo inspeccionar y interacuar con solicitudes y
+                respuestas para una mayor inteligencia de manejo de trafico y aceleracion de la web.</p>
+            <br>
+            <p>El cache es a menudo la pieza mas critica del software de un negocio basado en la web. Varnish cache es
+                un HTTP proxy de codigo abierto. Varnish visita tu servidor una vez para almacenar el cache de la
+                pagina, de ahi en adelante las siguientes solicitudes seran servidas por Varnish. </p>
+            <h3>•Proxies SOCKS:</h3>
+            <p>Los proxies SOCKS mas amplios que los Proxies HTTP, en el sentido de que pueden utilizarse tambien desde
+                aplicaciones que no esten controladas por la web. Siguen funcionando a nivel de aplicacion.</p>
+            <h3>•Proxies transparantes:</h3>
+            <p>Estan diseñados para ser gestionados por un administrador y pasar desapercibidos por los usuarios. Se
+                utilizan para monitorizar el trafico de la web. (Server proxy).</p>
+        </section>
+        <section class="http">
+            <h2>•HTTP</h2>
+            <div>
+                <div>
+                    <p>Protocolo de transferencia de hipertexto, es el protocolo de comunicacion que permite las
+                        transferencias de informacion a travez de archivos 'XHTML,HTML...' en la WWB. Es un protocolo
+                        sin estado, por lo que no guarda ninguna informacion sobre conexiones anteriores. El desarrollo
+                        de aplicaciones web necesita frecuentemente mantener estados, para esto se implementan las
+                        cookies, que son informacion que un servidor puede almacenar en el sistema cliente. Esto le
+                        permite a las aplicaciones web instituir la noción de sesión, y también permite rastrear
+                        usuarios, ya que las cookies pueden guardarse en el cliente por tiempo indeterminado.</p>
+                    <p>Se describen los tipos de mensajes y distintas estructuras de los mensajes del protocolo HTTP/1.X
+                        y HTTP/2</p>
+                    <p>Los mensajes HTTP son en texto plano, lo que lo hace mas legible y facil de depurar, pero
+                        haciendo los mensajes mas largos.</p>
+                </div>
+                <img src="./media/HTTP.png" alt="">
+            </div>
+            <h3>Estructura:</h3>
+            <h4>•Linea inicial:</h4>
+            <p>Para las peticiones: la accion requerida por el servidor (metodo de peticion) seguido de la URL del
+                recurso y la version de HTTP que soporta el cliente</p>
+            <p>Para las respuestas: La version del HTTP usado seguido del codigo de respuesta y de la frase asociada a
+                dicho retorno.</p>
+            <br>
+            <p>
+            <h4>•Cabecera del mensaje:</h4>Las cabeceras del mensaje que terminan con una linea en blanco. Son
+            metadatos. Estas cabeceras le dan gran flexibilidad al protocolo.</p>
+            <br>
+            <p>
+            <h4>•Cuerpo del mensaje:</h4> Es opcional. Su presencia depende de la linea anterior del mensaje y del tipo
+            de recurso al que hace referencia la URL. tipicamente tiene los datos que se intercambian cliente y
+            servidor.</p>
+            <br>
+            <h3>Metodos de peticion:</h3>
+            <h4>Get:</h4>
+            <p>Solicita una representacion del recurso solicitado. Las peticiones que usan el metodo get solo deben
+                recuperar datos.</p>
+            <h4>Head:</h4>
+            <p>Pide una respuests identica a la peticion del get, pero sin el cuerpo de la respuesta.</p>
+            <h4>Post:</h4>
+            <p>Se utiliza para enviar una entidad a un recurso especifico, causando a menudo un cambio de estado o
+                efectos secundarios en el servidor.</p>
+            <h4>Put:</h4>
+            <p>Reemplaza todas las representaciones actuales del recurso de destino con la carga útil de la petición.
+            </p>
+            <h4>Delete:</h4>
+            <p>Borra un recurso en específico.</p>
+            <h4>Connect:</h4>
+            <p>Establece un túnel hacia el servidor identificado por el recurso.</p>
+            <h4>Options</h4>
+            <p>Es utilizado para describir las opciones de comunicación para el recurso de destino.</p>
+            <h4>Trace:</h4>
+            <p>Realiza una prueba de bucle de retorno de mensaje a lo largo de la ruta al recurso de destino.</p>
+            <h4>Patch:</h4>
+            <p>Es utilizado para aplicar modificaciones parciales a un recurso.</p>
+        </section>
+        <section class="url-uri">
+            <h2>URL vs URI</h2>
+            <div>
+                <img src="./media/URL.png" alt="">
+                <div>
+                    <h3>URI</h3>
+                    <p>El URI es el nombre unico con el que cada archivo se encuentra identificado a fin de ser
+                        encontrado rapidamente. Funciona como una direccion por la cual puede ser obtenido un recurso
+                        determinado.</p>
+                    <h3>URL</h3>
+                    <p>Es el nombre único que tiene cada recurso o medio disponible en internet a fin de poder
+                        encontrarlo, y puede ser un portal web, un video, una imagen e incluso un segmento de texto. A
+                        su vez, mediante este es posible obtener cierta información clave sobre los mismos. Por esto
+                        cada página web sitúa palabras claves en las direcciones de imágenes, videos o en el propio
+                        sitio a fin de que sea encontrado con facilidad, además de servir como el “nombre” de un
+                        recurso.</p>
+                    <p>También se utiliza la URL como una pieza clave del funcionamiento de los motores de búsqueda, ya
+                        que estos encuentran las similitudes entre el texto introducido en la búsqueda y la dirección de
+                        una serie de páginas.</p>
+                </div>
+            </div>
+            <h3>Funcionalidad de URI</h3>
+            <p>El objetivo primordial del URI consiste en identificar un recurso específico de una manera única.
+                Para ello son indispensables 2 elementos “scheme y path”, aunque en total un URI puede conformarse
+                de 5 partes:</p>
+            <br>
+            <h4>Scheme:</h4>
+            <p>Establece las condiciones y el protocolo a utilizar.</p>
+            <h4>Path:</h4>
+            <p>Define la ruta exacta, pese a ser necesario el contenido del mismo, puede encontrarse vacío.</p>
+            <h4>Authority:</h4>
+            <p>Identifica el dominio en el cual se encuentra el contenido.</p>
+            <h4>Query:</h4>
+            <p>Este es un elemento que permite definir el recurso al que se desea acceder.</p>
+            <h4>Fragment:</h4>
+            <p>Señala una parte del recurso principal.</p>
+            <br>
+            <h3>Tipos de URI</h3>
+            <h4>URI absoluto:</h4>
+            <p>Está es la dirección más completa y detallada posible para un recurso. La misma debe conformarse por, al
+                menos, 3 elementos de entre todos los que lo contiene, que deben ser scheme, authority y path, para que
+                el URI sea funcional y pueda considerarse completo.</p>
+            <h4>URI relativo:</h4>
+            <p>Es una versión más simple y breve de acceder al mismo recurso. Este tipo de URI omite el fragmento
+                “Scheme” pero cuenta con el resto de las partes de la dirección. Sin embargo, para que este sea
+                funcional debe ser compatible con la estructura del URI de base.</p>
+            <br>
+            <h3>Diferencias:</h3>
+            <p>Una diferencia entre URL y URI es que el primero solo funciona como un localizador, indicando donde
+                encontrar el elemento. Mientras que la URI permite tanto identificar como localizar cada recurso ya que
+                dentro de esta se encuentra a su vez la URL, por lo que puede cumplir ambas funciones.</p>
+            <img src="./media/CuadroURIURL.png" alt="">
+            </section>
+    </main>
+    <footer>
+        <a href="./index.html"><button>Home</button></a>
+    </footer>
+    <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+</body>
+
+</html>

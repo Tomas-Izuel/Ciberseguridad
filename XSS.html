@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./styles/xss.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <title>XSS</title>
+</head>
+
+<body>
+    <header>
+        <h2>Cross Site Scripting</h2>
+        <a href="./index.html"><button>Home</button></a>
+    </header>
+    <main>
+        <section class="introduction">
+            <img src="https://blog.hackmetrix.com/wp-content/uploads/2021/07/hackmetrix_que_es_xss_cross_site_scripting-1.png"
+                alt="illustration of a xss">
+            <div>
+                <h2>¿Que es XSS?</h2>
+                <p>Es una vulnerabilidad de seguridad que permite a un atacante inyectar en un sitio web código
+                    malicioso del lado del cliente. Este código es ejecutado por las vícitmas y permite a los atacante
+                    eludir los controles de acceso y hacerce pasar por usuarios. </p>
+                <br>
+                <p>Estos ataques tienen éxito si la aplicación web no emplea suficiente validación o codificación. El navegador del usuario no puede detectar que el script malicioso no es confiable, por lo que da acceso a cookies, tokens de sesión u otra información sensible específica del sitio, o permite que el escript reescriba contenido HTML.</p>
+                <br>
+                <p>El contenido malicioso a menudo incluye JavaScript, pero a veces HTML, Flash o cualquier otro código que el navegador pueda ejecutar. La variedad de ataques basados en XSS es casi ilimitado. pero comúnmente incluyen la transmisión de datos privados como cookies u otra información de sesión al atacante, la redirección de la víctima a una página web controlada por el atacante o la realización de otras operaciones maliciosas en el equipo del usuario bajo la apariencia de un sitio vulnerable.</p>
+            </div>
+        </section>
+        <section class="vertical">
+            <h2>Causas:</h2>
+            <p>•Los datos entran en una aplicación web a través de una fuente no confiable (en la mayoría de los casos, una solicitud web)</p>
+            <br>
+            <p>•El contenido dinámico se envía a un usuario web sin ser validado como contenido malicioso.</p>
+        </section>
+        <section class="vertical">
+            <h2>Tipos de XSS</h2>
+            <br>
+            <h3>XSS Reflejados</h3>
+            <p>Los ataques reflejados son aquellos en los que la secuencia de comandos inyectada se refleja en el servidor web, como en un mensaje de error, resultado de búsqueda o cualquier otra respuesta que incluya parte o la totalidad de la entrada enviada al servidor como parte de la solicitud. Los ataques reflejados se entregan a las víctimas a través de otra ruta, como en un mensaje de correo electrónico o en algún otro sitio web. Cuando se engaña a un usuario para que haga clic en un enlace malicioso, envíe un formulario especialmente diseñado o simplemente navegue a un sitio malicioso, el código inyectado viaja al sitio web vulnerable, que refleja el ataque al navegador del usuario. Luego, el navegador ejecuta el código porque proviene de un servidor "confiable". El XSS reflejado también se denomina a veces XSS no persistente o tipo II.</p>
+            <br>
+            <a href="./paginas-vulnerables/xss/index.html" style="margin: 0 auto;"><button class="ejemplo" style="border-radius: 5px;">Ejemplo</button></a>
+            <br>
+            <h3>XSS Almacenados</h3>
+            <p>Los ataques almacenados son aquellos en los que la secuencia de comandos inyectada se almacena de forma permanente en los servidores de destino, como en una base de datos, en un foro de mensajes, registro de visitantes, campo de comentarios, etc. La víctima luego recupera la secuencia de comandos maliciosa del servidor cuando solicita la información almacenada. información. El XSS almacenado también se conoce a veces como XSS persistente o de tipo I.</p>
+            <br>
+            <h4>Blind Cross-site Scripting</h4>
+            <p>Es una forma de XSS persistente. Por lo general, ocurre cuando la carga útil del atacante se guarda en el servidor y se refleja en la víctima desde la aplicación de back-end. Por ejemplo, en los formularios de comentarios, un atacante puede enviar la carga útil maliciosa utilizando el formulario, y una vez que el usuario/administrador de back-end de la aplicación abra el formulario enviado por el atacante a través de la aplicación de back-end, la carga útil del atacante se ejecutará. Blind Cross-site Scripting es difícil de confirmar en el escenario del mundo real, pero una de las mejores herramientas para esto es XSS Hunter.</p>
+            <br>
+            <a href="./index.html" style="margin: 0 auto;"><button class="ejemplo" style="border-radius: 5px;">Ejemplo</button></a>
+            <br>
+            <h3>DOM Based XSS</h3>
+            <p>Es un ataque XSS en el que la carga útil del ataque se ejecuta como resultado de la modificación del "entorno" DOM en el navegador de la víctima utilizado por el script del lado del cliente original, de modo que el código del lado del cliente se ejecuta de manera "inesperada". Es decir, la página en sí (es decir, la respuesta HTTP) no cambia, pero el código del lado del cliente contenido en la página se ejecuta de manera diferente debido a las modificaciones maliciosas que se han producido en el entorno DOM.</p>
+            <p>Esto contrasta con otros ataques XSS (almacenados o reflejados), en los que la carga útil del ataque se coloca en la página de respuesta (debido a una falla del lado del servidor).</p>
+            <br>
+            <a href="./paginas-vulnerables/xss/index.html" style="margin: 0 auto;"><button class="ejemplo" style="border-radius: 5px;">Ejemplo</button></a>
+            <br>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+
+</html>

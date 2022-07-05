@@ -1,0 +1,96 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-family: 'Roboto Mono', monospace;
+    background-color: black;
+    color: rgb(255, 255, 255);
+}
+
+header{
+    width: 100%;
+}
+
+header > div{
+    margin-top: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img{
+    filter: drop-shadow(0 0 100px #FF007F);
+}
+
+.texto{
+    padding-left: 5em;
+    width: 55%;
+}
+
+.texto h1{
+    color: #FF007F;
+    margin-bottom: 10px;
+}
+
+.texto h1 span{
+    position: relative;
+}
+
+.texto h1 span::after{
+    content: "";
+    border-left: 1px solid white;
+    background-color: black;
+    right: 0;
+    height: 100%;
+    position: absolute;
+    animation: type 5s infinite alternate steps(50);
+}
+
+.texto p span{
+    color: #FF007F
+}
+
+li{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+li ul{
+    margin: 0 1.5em;
+}
+
+li ul a button{
+    padding: 1.2em;
+    background-color: black;
+    border: 2px solid rgb(255, 255, 255);
+    color: white;
+    width: 10em;
+    transition: all 0.5s;
+}
+
+li ul a button:hover{
+    color: #FF007F;
+    border: 2px solid #FF007F;
+    box-shadow: 0 0 30px #FF007F;
+    padding: 1.5em;
+}
+
+#marca{
+    text-align: center;
+    margin-top: 10em;
+    font-size: 12px;
+}
+
+@keyframes type{
+    from {
+        width: 100%;
+    }
+    to {
+        width: 0;
+    }
+}
